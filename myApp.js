@@ -69,18 +69,25 @@ const findPeopleByName = (personName, done) => {
   }
 });*/
 const findOneByFood = (food, done) => {
-  Person.findOne({ favoriteFoods: {$all: [food]} }, (error, result) => {
+  Person.findOne({ favoriteFoods: { $all: [food] } }, (error, result) => {
     if (error) {
       console.log(error);
     } else {
-      console.log(result)
+      console.log(result);
       done(null, result);
     }
   });
 };
 
 const findPersonById = (personId, done) => {
-  done(null /*, data*/);
+  Person.findById({ id: personId }, (error, result) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(result);
+      done(null, result);
+    }
+  });
 };
 
 const findEditThenSave = (personId, done) => {
