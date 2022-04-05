@@ -97,13 +97,13 @@ const findEditThenSave = (personId, done) => {
       console.log(error)
     }else {
       result.favoriteFoods.push(foodToAdd)
-      result.save(error, updatedResult)=>
+      result.save((error, updatedResult)=>{
       if (error) {
         console.log(error);
       } else {
         
         done(null, updatedResult);
-      }
+      }})
     }
   })
 
