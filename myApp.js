@@ -92,7 +92,7 @@ const findPersonById = (personId, done) => {
 
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
-  const findPersonById =(personId, (error, result) => {
+  Person.findById(personId, (error, result) => {
     if(error){
       console.log(error)
     }else {
