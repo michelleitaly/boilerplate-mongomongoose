@@ -120,7 +120,7 @@ const findAndUpdate = (personName, updatedResult) => {
     }
   });
 
-  done(null /*, data*/);
+  //done(null /*, data*/);
 };
 
 const removeById = (personId, done) => {
